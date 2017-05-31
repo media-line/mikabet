@@ -1,0 +1,117 @@
+.category-preview {
+    background-color: $blue-white;
+    padding: 44px 0;
+
+    &__blocks {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__block {
+        height: 190px;
+        width: 31.5%;
+        position: relative;
+        display: block;
+        overflow: hidden;
+        text-decoration: none;
+        text-align: center;
+
+        &:hover {
+            .category-preview__img {
+                transform: scale(1.2);
+            }
+
+            .category-preview__hover {
+                background-color: rgba($blue-light, 0.7);
+            }
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: 0.3s;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background-color: rgba($black, 0.7);
+        transition: 0.3s;
+    }
+
+    &__title {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        color: $white;
+        padding-top: 20px;
+    }
+
+    &__info {
+        position: relative;
+        z-index: 2;
+        padding-top: 35px;
+
+        svg {
+            width: 70px;
+        }
+
+        .svg-medal, .svg-handshake {
+            fill: $white;
+        }
+
+        .svg-pipe-micro {
+            stroke: $white;
+        }
+
+        &_pipe {
+            svg {
+                width: 120px;
+                position: relative;
+                top: -7px;
+                left: -22px;
+            }
+        }
+    }
+
+    &__icon {
+        height: 75px;
+    }
+}
+
+@media (max-width: $mobile-point) {
+    .category-preview {
+        padding: 20px 0;
+
+        &__title {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: $small-mobile-point) {
+    .category-preview {
+        &__title {
+            font-size: 16px;
+        }
+
+        &__info {
+            &_pipe {
+                svg {
+                    left: -35px;
+                    position: relative;
+                }
+            }
+        }
+    }
+}

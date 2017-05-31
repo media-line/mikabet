@@ -1,0 +1,86 @@
+.catalog-preview {
+    background-color: $white;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    /*svg {
+        height: 70px;
+    }
+
+    .svg-pipe1, .svg-pipe2, .svg-pipe-micro, .svg-pipe-road, .svg-pipe-canal, .svg-pipe-block, .svg-block, .svg-border, .svg-beams {
+        stroke: $blue-light;
+    }*/
+
+    &__category {
+        width: 25%;
+        min-width: 25%;
+        padding: 25px 25px 0 25px;
+        text-decoration: none;
+        color: $black;
+        transition: 0.3s;
+        text-align: center;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        background-color: $white;
+        border-right: 1px solid $gray;
+        border-top: 1px solid $gray;
+        box-sizing: border-box;
+        display: block;
+
+        &:last-child {
+            border-right: none;
+        }
+
+        &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+            border-top: none;
+        }
+
+        &:hover {
+            background-color: $blue-light;
+            color: $white;
+
+            [class^="icon-"], [class*=" icon-"] {
+                color: $white;
+            }
+        }
+    }
+
+    &__title {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    [class^="icon-"], [class*=" icon-"] {
+        color: $blue-light;
+        display: inline-block;
+        height: 70px;
+        transition: 0.3s;
+    }
+}
+
+@media (max-width: $tablet-point) {
+    .catalog-preview {
+        &__category {
+            font-size: 15px;
+        }
+    }
+}
+
+@media (max-width: $mobile-point) {
+    .catalog-preview {
+        &__category {
+            min-width: 50%;
+            width: 50%;
+            font-size: 14px;
+            padding: 25px 5px 0 5px;
+
+            &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+                border-top: 1px solid $gray;
+            }
+        }
+    }
+}

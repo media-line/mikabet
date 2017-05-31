@@ -1,0 +1,51 @@
+.content {
+    &_about {
+        background-color: $blue-white;
+        background-repeat: no-repeat;
+        background-position: 120% 140%;
+        line-height: 1.7;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        padding-bottom: 70px;
+
+        p {
+            padding-bottom: 25px;
+        }
+    }
+
+    &__two-columns {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__two-column {
+        min-width: 49%;
+        width: 49%;
+    }
+}
+
+@media (max-width: $small-device-point) {
+    .content {
+        &_about {
+            background-size: 65%;
+            background-position: 100% 100%;
+        }
+    }
+}
+
+@media (max-width: $mobile-point) {
+    .content {
+        &_about {
+            background-image: none !important;
+        }
+
+        &__two-columns {
+            flex-wrap: wrap;
+        }
+
+        &__two-column {
+            width: 100%;
+            min-width: 100%;
+        }
+    }
+}

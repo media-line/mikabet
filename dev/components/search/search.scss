@@ -1,0 +1,136 @@
+.search {
+    &__button {
+        padding: 10px;
+        cursor: pointer;
+
+        &:hover {
+            .svg-search {
+                fill: $blue-light;
+            }
+        }
+
+        svg {
+            width: 17px;
+        }
+
+        .svg-search {
+            fill: white;
+            transition: 0.5s;
+        }
+    }
+
+    &__input {
+        height: 32px;
+        width: 100%;
+        background-color: transparent;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 2px solid $white;
+        outline: none;
+        color: $white;
+        font-size: 26px;
+
+        &::-webkit-input-placeholder {
+            color: $white;
+        }
+
+        &::-moz-placeholder {
+            color: $white;
+        }
+
+        &:-ms-input-placeholder {
+            color: $white;
+        }
+
+        &:-moz-placeholder {
+            color: $white;
+        }
+    }
+
+    &__line {
+        position: relative;
+        width: 100%;
+    }
+
+    &__close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 30px;
+        height: 100%;
+        cursor: pointer;
+
+        &:after {
+            background-color: $white;
+            content: '';
+            height: 2px;
+            width: 100%;
+            display: block;
+            position: absolute;
+            top: 7px;
+            left: 5px;
+            transform-origin: top left;
+            transform: rotate(45deg);
+            transition: 0.3s;
+        }
+
+        &:before {
+            background-color: $white;
+            content: '';
+            height: 2px;
+            width: 100%;
+            display: block;
+            position: absolute;
+            bottom: 7px;
+            left: 5px;
+            transform-origin: bottom left;
+            transform: rotate(-45deg);
+            transition: 0.3s;
+        }
+
+        &:hover {
+            &:before, &:after {
+                background-color: $blue-light;
+            }
+        }
+    }
+
+    &__block {
+        background-color: $blue;
+        width: 100%;
+        z-index: 1;
+        padding: 10px 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-50px);
+        transition: 0.3s;
+
+        &_active {
+            transform: translateY(00px);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+@media (max-width: $tablet-point) {
+    .search {
+        &__button {
+            display: none;
+        }
+
+        &__input {
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: $mobile-point) {
+    .search {
+        &__input {
+            font-size: 18px;
+            height: 30px;
+        }
+    }
+}

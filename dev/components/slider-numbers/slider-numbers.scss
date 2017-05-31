@@ -1,0 +1,163 @@
+.slider-numbers {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Ubuntu", sans-serif;
+    padding: 65px 0;
+
+    &__text {
+        font-size: 18px;
+        color: $white;
+        text-transform: uppercase;
+        line-height: 1.1;
+        text-align: center;
+        height: 40px;
+    }
+
+    &__arrow {
+        border-left: 2px solid $white;
+        border-top: 2px solid $white;
+        border-right: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        background-color: transparent;
+        height: 25px;
+        width: 25px;
+        display: inline-block;
+        position: absolute;
+        top: 28%;
+        margin-top: -12px;
+        cursor: pointer;
+        transition: 0.3s;
+        outline: none;
+        opacity: 1;
+
+        &_prev {
+            transform: rotate(-45deg);
+            left: -30px;
+        }
+
+        &_next {
+            transform: rotate(135deg);
+            right: -30px;
+        }
+
+        &:hover {
+            border-left: 2px solid $blue-light;
+            border-top: 2px solid $blue-light;
+        }
+
+        &.slick-disabled {
+            opacity: 0;
+        }
+    }
+
+    &__slider {
+        margin: 0 30px;
+    }
+
+    &__number {
+        height: 100px;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 35px;
+        background-color: $white;
+        border-radius: 100%;
+        font-size: 40px;
+        font-weight: 700;
+        color: $blue-light;
+        border: 1px solid $white;
+        position: relative;
+
+        &_empty {
+            background-color: transparent;
+            border: 1px solid $blue-white;
+            color: $white;
+            font-size: 28px;
+
+            &:after {
+                content: '';
+                height: 3px;
+                width: 30%;
+                background-color: $white;
+                position: absolute;
+                bottom: 23%;
+            }
+
+            .slider-numbers__value {
+                position: relative;
+                top: 6px;
+            }
+        }
+
+        &_small {
+            font-size: 27px;
+        }
+
+        svg {
+            width: 22px;
+            position: absolute;
+            top: 15%;
+        }
+
+        .svg-star {
+            fill: $white;
+        }
+    }
+
+    &__slide {
+        text-align: center;
+        outline: none;
+        position: relative;
+        height: 180px;
+
+        &.slick-active {
+            &:after {
+                content: '';
+                height: 1px;
+                width: 40%;
+                position: absolute;
+                right: 80%;
+                background-color: $blue-white;
+                top: 28%;
+                transition: 0.3s;
+                opacity: 0;
+            }
+
+            & + .slider-numbers__slide.slick-active {
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__number-wrap {
+        display: inline-block;
+    }
+
+    &__number-text {
+        font-size: 13px;
+        font-weight: 700;
+        color: $blue-light;
+        display: block;
+        text-transform: uppercase;
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: $tablet-point) {
+    .slider-numbers {
+        &__text {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: $tablet-point) {
+    .slider-numbers {
+            padding: 25px 0 10px 0;
+    }
+}
