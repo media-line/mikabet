@@ -1,0 +1,122 @@
+@import "./../../scss/_variables.scss";
+
+.left-menu {
+    border: 1px solid $blue-white;
+    background-color: $white;
+
+    &__block {
+        padding: 5px 15px;
+        display: block;
+        color: $black;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        text-decoration: none;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            background-color: $blue-light;
+            color: $white;
+
+            .left-menu__img {
+                &_pipe1 {
+                    background-image: url('./../images/pipe1-hover.png');
+                }
+
+                &_pipe2 {
+                    background-image: url('./../images/pipe2-hover.png');
+                }
+
+                &_pipe3 {
+                    background-image: url('./../images/pipe3-hover.png');
+                }
+
+                &_pipe4 {
+                    background-image: url('./../images/pipe4-hover.png');
+                }
+
+                &_block {
+                    background-image: url('./../images/block-hover.png');
+                }
+
+                &_border {
+                    background-image: url('./../images/border-hover.png');
+                }
+
+                &_lines {
+                    background-image: url('./../images/lines-hover.png');
+                }
+
+                &_fbs {
+                    background-image: url('./../images/fbs-hover.png');
+                }
+
+                &_lent {
+                    background-image: url('./../images/lent-hover.png');
+                }
+
+                &_beton {
+                    background-image: url('./../images/beton-hover.png');
+                }
+            }
+        }
+    }
+
+    &__img {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: 0.3s;
+        width: 40px;
+        min-width: 40px;
+        height: 45px;
+
+        &_pipe1 {
+            background-image: url('./../images/pipe1.png');
+        }
+
+        &_pipe2 {
+            background-image: url('./../images/pipe2.png');
+        }
+
+        &_pipe3 {
+            background-image: url('./../images/pipe3.png');
+            min-width: 30px;
+            width: 30px;
+            margin: 0 5px;
+        }
+
+        &_pipe4 {
+            background-image: url('./../images/pipe4.png');
+        }
+
+        &_block {
+            background-image: url('./../images/block.png');
+        }
+
+        &_border {
+            background-image: url('./../images/border.png');
+        }
+
+        &_lines {
+            background-image: url('./../images/lines.png');
+        }
+
+        &_fbs {
+            background-image: url('./../images/fbs.png');
+        }
+
+        &_lent {
+            background-image: url('./../images/lent.png');
+        }
+
+        &_beton {
+            background-image: url('./../images/beton.png');
+        }
+    }
+
+    &__text {
+        margin-left: 15px;
+    }
+}

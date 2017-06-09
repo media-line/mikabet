@@ -1,3 +1,7 @@
+@import "./../../scss/_variables.scss";
+
+
+
 .slider {
     font-family: 'Ubuntu', sans-serif;
     color: $white;
@@ -7,15 +11,20 @@
         height: 660px;
         padding-top: 130px;
         box-sizing: border-box;
+        background-position: center;
+        background-size: cover;
     }
 
     &__text {
         padding: 0 120px;
+        font-size: 20px;
+        line-height: 1.5;
 
         &_big {
-            font-size: 80px;
+            font-size: 50px;
             font-weight: 700;
             padding-bottom: 35px;
+            line-height: 1.1;
         }
     }
 
@@ -55,112 +64,13 @@
         position: relative;
     }
 
-    &__top {
-        height: 70px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        background-color: rgba($black, 0.6);
-        z-index: 2;
-    }
-
-    &__top-wrap {
-        display: flex;
-        align-items: stretch;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    &__top-menu {
-        padding: 25px 0;
-        width: 70%;
-    }
-
-    &__search {
-        display: flex;
-        align-items: center;
-
-        .search__line {
-            display: none;
-        }
-    }
-
-    &__search-block {
-        display: flex;
-        align-items: center;
-        position: absolute;
-        left: 0;
-        right: 0;
-    }
-
-    &__download {
-        background-color: $blue-light;
-        color: $white;
-        text-decoration: none;
-        display: inline-block;
-        text-transform: uppercase;
-        font-weight: 700;
-        padding: 21px;
-        transition: 0.3s;
-        border: 2px solid $blue-light;
-
-        &:hover {
-            background-color: transparent;
-            border: 2px solid $white;
-        }
-
-        svg {
-            width: 20px;
-            height: 20px;
-            position: relative;
-            top: 3px;
-            margin-right: 4px;
-        }
+    &__button {
+        margin: 50px 120px 0 120px;
     }
 }
 
 @media (max-width: $tablet-point) {
     .slider {
-        &__top {
-            height: 110px;
-        }
-
-        &__top-menu {
-            width: 100%;
-            min-width: 100%;
-            box-sizing: border-box;
-            padding: 20px 0;
-        }
-
-        &__download {
-            padding: 15px 20px 15px 40px;
-            font-size: 16px;
-            position: relative;
-
-            svg {
-                position: absolute;
-                left: 12px;
-                top: 13px;
-                width: 19px;
-                height: 19px;
-            }
-        }
-
-        &__search {
-            width: 500px;
-
-            .search__line {
-                display: block;
-            }
-        }
-
-        &__text {
-            &_big {
-                font-size: 60px;
-            }
-        }
-
         &__slide {
             padding-top: 150px;
         }
@@ -174,41 +84,19 @@
                 right: 20px;
             }
         }
+
+        &__text {
+            font-size: 18px;
+
+            &_big {
+                font-size: 40px;
+            }
+        }
     }
 }
 
 @media (max-width: $mobile-point) {
     .slider {
-        &__top {
-            height: auto;
-        }
-
-        &__top-menu {
-            padding: 0;
-        }
-
-        &__search {
-            padding: 5px 0;
-            width: 55%;
-            min-width: 55%;
-            box-sizing: border-box;
-        }
-
-        &__download {
-            padding: 10px;
-            width: 40%;
-            min-width: 40%;
-            box-sizing: border-box;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 13px;
-
-            svg {
-                display: none;
-            }
-        }
-
         &__slide {
             padding-top: 100px;
             height: 600px;
@@ -218,22 +106,24 @@
             padding: 0 40px;
 
             &_big {
-                font-size: 36px;
+                font-size: 28px;
                 padding-bottom: 20px;
             }
+        }
+
+        &__button {
+            margin: 40px 40px 0 40px;
         }
     }
 }
 
 @media (max-width: $small-mobile-point) {
     .slider {
-        &__download {
-            font-size: 12px;
-        }
-
         &__text {
+            font-size: 16px;
+
             &_big {
-                font-size: 30px;
+                font-size: 22px;
             }
         }
     }

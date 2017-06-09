@@ -1,0 +1,49 @@
+@import "./../../scss/_variables.scss";
+
+
+.form {
+    &__block {
+        padding-bottom: 10px;
+
+        input {
+            border-left: none;
+            border-top: none;
+            border-right: none;
+            border-bottom: 1px solid $blue-light;
+            background-color: transparent;
+            width: 100%;
+            outline: none;
+            height: 30px;
+            font-size: 16px;
+            transition: 0.3s;
+
+            &:hover, &:active {
+                border-bottom: 1px solid $black;
+            }
+        }
+
+        textarea {
+            width: 100%;
+            background-color: white;
+            border: 1px solid $blue-light;
+            height: 150px;
+            transition: 0.3s;
+            outline: none;
+            resize: none;
+
+            &:hover, &:active {
+                border: 1px solid $black;
+            }
+        }
+    }
+
+    &__text {
+        padding-bottom: 3px;
+    }
+
+    .button {
+        max-width: 70%;
+        text-transform: none;
+        font-weight: 400;
+    }
+}

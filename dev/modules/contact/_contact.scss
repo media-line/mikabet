@@ -1,0 +1,37 @@
+.contact {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 7px;
+
+    &__icon {
+        display: flex;
+        align-items: center;
+
+        svg {
+            width: 25px;
+            max-height: 25px;
+        }
+
+        .svg-placeholder {
+            fill: $blue-light;
+        }
+
+        .svg-watch {
+            fill: $blue-light;
+        }
+
+        .svg-phone {
+            fill: $blue-light;
+        }
+
+        .svg-mail {
+            fill: $blue-light;
+        }
+
+        .svg-chief {
+            fill: $blue-light;
+        }
+
+        margin-right: 15px;
+    }
+}

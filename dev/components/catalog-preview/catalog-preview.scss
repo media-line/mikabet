@@ -1,4 +1,6 @@
-.catalog-preview {
+@import "./../../scss/_variables.scss";
+
+.catalog-preview { 
     background-color: $white;
     display: flex;
     flex-wrap: wrap;

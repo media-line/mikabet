@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
+<head>  
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Ubuntu:300,400,700&amp;subset=cyrillic" rel="stylesheet">
 
-    <script src="/js/commonWebpack.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <script src="/lib/slick.min.js"></script>
+    <script src="/lib/odometer.min.js"></script>
+    <script src="/lib/isMobile.min.js"></script>
+
     <script src="/js/common.js"></script>
-    <script src="/js/mainpage.js"></script>
-    <script src="/js/topMenu.js"></script>
+    <script src="/js/top-menu.js"></script>
     <script src="/js/slider.js"></script>
     <script src="/js/search.js"></script>
-    <script src="/js/basket.js"></script>
-    <script src="/js/catalogPreview.js"></script>
-    <script src="/js/objectsPreview.js"></script>
-    <script src="/js/sliderNumbers.js"></script>
-    <script src="/js/categoryPreview.js"></script>
-    <script src="/js/newsPreview.js"></script>
-    <script src="/js/bottomMenu.js"></script>
+    <script src="/js/catalog-preview.js"></script>
+    <script src="/js/objects-preview.js"></script>
+    <script src="/js/slider-numbers.js"></script>
+
+
+    <link href="./lib/slick.css" rel="stylesheet">
+    <link href="./lib/odometer-default.css" rel="stylesheet">
+
+    <link href="./css/common.css" rel="stylesheet">
+    <link href="./css/top-menu.css" rel="stylesheet">
+    <link href="./css/slider.css" rel="stylesheet">
+    <link href="./css/search.css" rel="stylesheet">
+    <link href="./css/basket.css" rel="stylesheet">
+    <link href="./css/catalog-preview.css" rel="stylesheet">
+    <link href="./css/objects-preview.css" rel="stylesheet">
+    <link href="./css/slider-numbers.css" rel="stylesheet">
+    <link href="./css/category-preview.css" rel="stylesheet">
+    <link href="./css/news-preview.css" rel="stylesheet">
+    <link href="./css/bottom-menu.css" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -211,10 +227,10 @@
     </header>
 
     <section class="slider">
-        <div class="slider__top">
+        <div class="header__top-block">
             <div class="container">
-                <div class="slider__top-wrap">
-                    <div class="slider__top-menu">
+                <div class="header__top-wrap-block">
+                    <div class="header__top-menu">
                         <div class="top-menu">
                             <div class="top-menu__element top-menu__element_svg">
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -249,7 +265,7 @@
                         </div>
                     </div>
 
-                    <div class="slider__search">
+                    <div class="header__search">
                         <div class="search__button">
                             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 250.313 250.313" style="enable-background:new 0 0 250.313 250.313;" xml:space="preserve">
                                 <path class="svg-search" style="fill-rule:evenodd;clip-rule:evenodd;" d="M244.186,214.604l-54.379-54.378c-0.289-0.289-0.628-0.491-0.93-0.76
@@ -277,7 +293,7 @@
             </div>
         </div>
 
-        <div class="slider__search-block">
+        <div class="header__search-block">
             <div class="search__block">
                 <div class="container">
                     <div class="search__line">
@@ -290,34 +306,21 @@
         </div>
 
         <div class="slider__slides">
-            <div class="slider__slide" style="background-image: url('./images/slide1.jpg');">
+            <div class="slider__slide" style="background-image: url('./images/slide.jpg');">
                 <div class="container slider__container">
                     <button class="slider__arrow slider__arrow_left"></button>
 
                     <div class="slider__text slider__text_big">
-                        480 000 м2<br>
-                        плитки в год
+                        СПЕЦЖЕЛЕЗОБЕТОН
                     </div>
 
                     <div class="slider__text">
-                        производится на немецом оборудовании Schlosser-Pfeiffer
+                        самый крупный представитель<br>
+                        железобетонных труб на территории СНГ
                     </div>
 
-                    <button class="slider__arrow slider__arrow_right"></button>
-                </div>
-            </div>
-
-            <div class="slider__slide" style="background-image: url('./images/slide2.jpg');">
-                <div class="container slider__container">
-                    <button class="slider__arrow slider__arrow_left"></button>
-
-                    <div class="slider__text slider__text_big">
-                        480 000 м2<br>
-                        плитки в год
-                    </div>
-
-                    <div class="slider__text">
-                        производится на немецом оборудовании Schlosser-Pfeiffer
+                    <div class="slider__button">
+                        <a href="/" class="button">Подробнее о производстве</a>
                     </div>
 
                     <button class="slider__arrow slider__arrow_right"></button>

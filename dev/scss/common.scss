@@ -1,0 +1,118 @@
+@import "./_reset.scss";
+@import "./_variables.scss";
+@import "./_mixins.scss";
+@import "./../modules/button/_button.scss";
+@import "./../modules/container/_container.scss";
+@import "./../modules/content/_content.scss";
+@import "./../modules/content-products/_content-products.scss";
+@import "./../modules/footer/_footer.scss";
+@import "./../modules/header/_header.scss";
+@import "./../modules/title/_title.scss";
+@import "./../modules/page-inner/_page-inner.scss";
+@import "./../modules/contact/_contact.scss";
+@import "./../modules/editor/_editor.scss";
+
+
+@font-face {
+    font-family: 'calibri';
+    src: //url('webfont.woff2') format('woff2'),
+        url('./../fonts/Calibri.ttf')  format('truetype'),
+        url('./../fonts/Calibri.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'trebuchetms';
+    src: //url('webfont.woff2') format('woff2'),
+        url('./../fonts/TrebuchetMS.ttf')  format('truetype'),
+        url('./../fonts/TrebuchetMS.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('./../fonts/icomoon.eot?2av1ak');
+  src:  url('./../fonts/icomoon.eot?2av1ak#iefix') format('embedded-opentype'),
+    url('./../fonts/icomoon.ttf?2av1ak') format('truetype'),
+    url('./../fonts/icomoon.woff?2av1ak') format('woff'),
+    url('./../fonts/icomoon.svg?2av1ak#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-e900:before {
+  content: "\e900";
+  font-size: 60px;
+}
+.icon-e901:before {
+  content: "\e901";
+  font-size: 60px;
+}
+.icon-e902:before {
+  content: "\e902";
+  font-size: 40px;
+  position: relative;
+  top: 15px;
+}
+.icon-e903:before {
+  content: "\e903";
+  font-size: 65px;
+}
+.icon-e904:before {
+  content: "\e904";
+  font-size: 70px;
+}
+.icon-e905:before {
+  content: "\e905";
+  font-size: 70px;
+}
+.icon-e907:before {
+  content: "\e907";
+  font-size: 70px;
+}
+.icon-e906:before {
+  content: "\e906";
+  font-size: 60px;
+}
+
+
+@media (max-width: $tablet-point) {
+    .icon-e902:before {
+        font-size: 30px;
+    }
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+::selection {
+    background-color: $blue;
+    color: $white;
+}
+
+b {
+    font-weight: 700;
+}
+
+p {
+    padding-bottom: 10px;
+}

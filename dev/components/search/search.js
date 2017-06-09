@@ -1,7 +1,5 @@
 "use strict";
 
-import './search.scss';
-
 const $button = ".search__button";
 const $block = ".search__block";
 const $close = ".search__close";

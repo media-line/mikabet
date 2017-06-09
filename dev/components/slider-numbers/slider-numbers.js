@@ -1,13 +1,11 @@
 "use strict";
 
-import './slider-numbers.scss';
-
-import slick from 'slick-carousel';
-import 'slick-carousel/slick/slick.css';
+/*import slick from 'slick-carousel';
+import 'slick-carousel/slick/slick.css';*/
 
 
-import Odometer from 'odometer';
-import 'odometer/themes/odometer-theme-default.css';
+/*import Odometer from 'odometer';
+import 'odometer/themes/odometer-theme-default.css';*/
 
 
 const $slider = '.slider-numbers__slider';

@@ -1,7 +1,5 @@
 "use strict";
 
-import './objects-preview.scss';
-
 const $title = '.objects-preview__title';
 const $button = '.objects-preview__button';
 

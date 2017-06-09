@@ -1,7 +1,5 @@
 "use strict";
 
-import './catalog-preview.scss';
-
 const $block = '.catalog-preview';
 
 $(window).on('load', function () {

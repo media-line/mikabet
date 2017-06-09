@@ -1,7 +1,5 @@
 "use strict";
 
-import './footer.scss';
-
 const $button = '.footer__up';
 
 $(document).ready(function () {

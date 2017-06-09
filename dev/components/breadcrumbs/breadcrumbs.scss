@@ -1,0 +1,42 @@
+@import "./../../scss/_variables.scss";
+
+.breadcrumbs {
+    color: $black;
+    font-size: 14px;
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    padding: 15px 0;
+
+    &__link {
+        color: $black;
+        text-decoration: none;
+        padding-bottom: 1px;
+        position: relative;
+        margin-right: 30px;
+        display: inline-block;
+        border-bottom: 1px solid $gray;
+        transition: 0.3s;
+
+        &:hover {
+            color: $blue-light;
+            border-bottom: 1px solid $blue-light;
+            text-decoration: none;
+        }
+
+        &:before {
+            content: '/';
+            display: inline-block;
+            color: $black;
+            position: absolute;
+            right: -20px;
+        }
+    }
+
+    &__element {
+        display: inline-block;
+        vertical-align: bottom;
+        padding-right: 15px;
+        padding-bottom: 1px;
+    }
+}

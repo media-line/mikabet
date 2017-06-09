@@ -1,0 +1,48 @@
+.page-inner {
+    background-size: cover;
+    background-position: center;
+    font-size: 16px;
+    line-height: 1.3;
+    font-family: 'Ubuntu';
+    padding-bottom: 30px;
+
+    &_contacts {
+        background-image: url('./../images/contacts-back.jpg');
+    }
+
+    &__wrap {
+        display: flex;
+    }
+
+    &__left {
+        width: 25%;
+        min-width: 25%;
+        margin-right: 3%;
+    }
+
+    &__right {
+        width: 72%;
+        min-width: 72%;
+    }
+
+    &__two-block {
+        display: flex;
+        align-items: stretch;
+        padding-bottom: 30px;
+    }
+
+    &__two-block-single {
+        width: 50%;
+        min-width: 50%;
+        box-sizing: border-box;
+
+        & + .page-inner__two-block-single {
+            padding-left: 40px;
+        }
+
+        &_line {
+            border-right: 1px solid $blue-light;
+            padding-right: 15px;
+        }
+    }
+}

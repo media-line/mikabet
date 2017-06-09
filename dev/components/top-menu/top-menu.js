@@ -1,8 +1,6 @@
 "use strict";
 
-import './top-menu.scss';
-
-import isMobile from 'ismobilejs';
+//import isMobile from 'ismobilejs';
 
 const $button = '.top-menu__menu-button';
 const activeButton = 'top-menu__menu-button_active';
