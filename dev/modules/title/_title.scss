@@ -45,6 +45,11 @@
         margin-right: 0px;
         padding-top: 0;
     }
+
+    &_inner {
+        text-align: left;
+        font-size: 24px;
+    }
 }
 
 @media (max-width: $tablet-point) {

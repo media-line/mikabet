@@ -1,0 +1,13 @@
+@import "./../../scss/_variables.scss";
+
+.catalog-categories {
+    &__preview {
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      
+        p {
+            padding-bottom: 25px;
+        }
+    }
+}

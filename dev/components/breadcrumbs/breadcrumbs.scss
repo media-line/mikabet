@@ -15,7 +15,7 @@
         position: relative;
         margin-right: 30px;
         display: inline-block;
-        border-bottom: 1px solid $gray;
+        border-bottom: 1px solid rgba($black, 0.5);
         transition: 0.3s;
 
         &:hover {

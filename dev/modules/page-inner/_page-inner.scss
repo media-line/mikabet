@@ -5,6 +5,7 @@
     line-height: 1.3;
     font-family: 'Ubuntu';
     padding-bottom: 30px;
+    background: linear-gradient(to top, rgba($blue-white, 0.3), $blue-white);
 
     &_contacts {
         background-image: url('./../images/contacts-back.jpg');
@@ -23,6 +24,17 @@
     &__right {
         width: 72%;
         min-width: 72%;
+
+        a {
+            color: $blue-light;
+            transition: 0.4s;
+            text-decoration: none;
+            font-weight: 500;
+
+            &:hover {
+                color: $black;
+            }
+        }
     }
 
     &__two-block {
@@ -43,6 +55,47 @@
         &_line {
             border-right: 1px solid $blue-light;
             padding-right: 15px;
+        }
+    }
+}
+
+@media (max-width: $tablet-point) {
+    .page-inner {
+        &__wrap {
+            flex-wrap: wrap;
+        }
+
+        &__left {
+            width: 100%;
+            min-width: 100%;
+            margin-bottom: 30px;
+        }
+
+        &__right {
+            width: 100%;
+            min-width: 100%;
+        }
+    }
+}
+
+@media (max-width: $mobile-point) {
+    .page-inner {
+        &__two-block-single {
+            min-width: 100%;
+            width: 100%;
+
+            &_line {
+                border-right: none;
+            }
+
+            & + .page-inner__two-block-single {
+                padding-left: 0;
+                margin-top: 20px;
+            }
+        }
+
+        &__two-block {
+            flex-wrap: wrap;
         }
     }
 }
