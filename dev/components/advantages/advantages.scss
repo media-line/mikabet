@@ -1,0 +1,77 @@
+@import "./../../scss/_variables.scss";
+
+.advantages {
+    background-color: $blue2;
+    padding: 30px;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__element {
+        display: flex;
+        align-items: center;
+
+        & + .advantages__element {
+            margin-left: 1%;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    &__title {
+        font-size: 16px;
+        font-weight: 500;
+        padding-bottom: 5px;
+    }
+
+    &__img {
+        min-width: 27%;
+        width: 27%;
+        margin-right: 3%;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: $tablet-point) {
+    .advantages {
+        padding: 30px 0;
+
+        &__element {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            & + .advantages__element {
+                margin-left: 3%;
+            }
+        }
+
+        &__img {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media (max-width: $mobile-point) {
+    .advantages {
+        &__list {
+            flex-direction: column;
+        }
+
+        &__element {
+            flex-wrap: nowrap;
+
+            & + .advantages__element {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+        }
+    }
+}

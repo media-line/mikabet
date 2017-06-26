@@ -2,10 +2,19 @@
 
 
 .form {
+    &__name {
+        font-size: 18px;
+        font-weight: 600;
+        padding: 20px 30px;
+        width: 100%;
+        border-bottom: 1px solid rgba($black, 0.1);
+        box-sizing: border-box;
+    }
+
     &__block {
         padding-bottom: 10px;
 
-        input {
+        input[type="text"] {
             border-left: none;
             border-top: none;
             border-right: none;
@@ -45,5 +54,193 @@
         max-width: 70%;
         text-transform: none;
         font-weight: 400;
+    }
+
+    &__body {
+        padding: 25px;
+        box-sizing: border-box;
+    }
+
+    &_classic {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .form__block {
+            width: 48%;
+            min-width: 48%;
+            display: inline-block;
+            padding-bottom: 20px;
+        }
+
+        .form__text {
+            padding-bottom: 10px;
+        }
+
+        input[type="text"] {
+            border: 1px solid $blue2;
+            background-color: $white;
+            padding: 10px 5px;
+            box-sizing: border-box;
+            height: 40px;
+
+            &:active, &:hover {
+                border: 1px solid $blue;
+            }
+        }
+    }
+
+    &_registration {
+        width: 400px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .form__block {
+            width: 100%;
+            min-width: 100%;
+            display: inline-block;
+            padding-bottom: 20px;
+        }
+
+        input[type="text"] {
+            border: 1px solid rgba($black, 0.1);
+            background-color: $white;
+            padding: 10px 5px;
+            box-sizing: border-box;
+            height: 40px;
+
+            &:active, &:hover {
+                border: 1px solid $blue;
+            }
+        }
+
+        textarea {
+            border: 1px solid rgba($black, 0.1);
+            background-color: $white;
+            font-size: 16px;
+            padding: 5px;
+            box-sizing: border-box;
+
+            &:active, &:hover {
+                border: 1px solid $blue;
+            }
+        }
+    }
+
+    &_login {
+        width: 400px;
+
+        input[type="text"] {
+            border: 1px solid rgba($black, 0.1);
+            background-color: $white;
+            padding: 10px 5px;
+            box-sizing: border-box;
+            height: 40px;
+
+            &:active, &:hover {
+                border: 1px solid $blue;
+            }
+        }
+
+        .form__block {
+            padding-bottom: 0;
+            position: relative;
+
+            a {
+                position: absolute;
+                right: 10px;
+                top: 12px;
+            }
+        }
+    }
+
+    &__label-radio {
+        height: 18px;
+        width: 18px;
+        display: inline-block;
+        background-color: $white;
+        border-radius: 100%;
+        border: 1px solid $blue2;
+        position: relative;
+        vertical-align: middle;
+        top: -2px;
+        cursor: pointer;
+
+        &:after {
+            position: absolute;
+            content: '';
+            height: 12px;
+            width: 12px;
+            display: inline-block;
+            background-color: transparent;
+            border-radius: 100%;
+            top: 50%;
+            left: 50%;
+            margin-left: -6px;
+            margin-top: -6px;
+            transition: 0.3s;
+        }
+    }
+
+    input[type="radio"] {
+        opacity: 0;
+        position: absolute;
+
+        &:checked + label {
+            &:after {
+                background-color: $blue-light;
+            }
+        }
+    }
+
+    &__block-inner {
+        & + .form__block-inner {
+            padding-left: 20px;
+        }
+    }
+
+    a {
+        color: $blue-light;
+        font-size: 14px;
+        text-decoration: none;
+        @include link-decoration-inverse ($blue-light, 1px, 1px, 0px, -4px, 0.3s)
+    }
+}
+
+@media (max-width: $mobile-point) {
+    .form {
+        &_classic {
+            .form__block {
+                width: 100%;
+                min-width: 100%;
+            }
+
+            .form__block-inner {
+                display: block;
+
+                & + .form__block-inner {
+                    padding-top: 5px;
+                    padding-left: 0;
+                }
+            }
+        }
+
+        &_registration {
+            width: 300px;
+            .form__block-inner {
+                display: block;
+
+                & + .form__block-inner {
+                    padding-top: 5px;
+                    padding-left: 0;
+                }
+            }
+        }
+
+        &_login {
+            width: 300px;
+        }
     }
 }

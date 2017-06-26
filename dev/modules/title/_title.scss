@@ -14,7 +14,7 @@
         content: '';
         width: 48%;
         height: 1px;
-        background-color: $blue-light;
+        background-color: $blue2;
         position: absolute;
         left: 0;
         bottom: 0;
@@ -24,7 +24,7 @@
         content: '';
         width: 48%;
         height: 1px;
-        background-color: $blue-light;
+        background-color: $blue2;
         position: absolute;
         right: 0;
         bottom: 0;
@@ -38,6 +38,8 @@
         bottom: -8px;
         left: 50%;
         margin-left: -8px;
+        box-sizing: content-box;
+        z-index: 1;
     }
 
     &_wide {

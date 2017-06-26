@@ -1,0 +1,59 @@
+select {
+    width: 100%;
+    border: 1px solid rgba($black, 0.7);
+    cursor: pointer;
+    position: relative;
+    height: 25px;
+    font-size: 16px;
+    z-index: 3;
+    background-color: transparent;
+}
+
+.select {
+    &__label {
+        background-color: $white;
+        height: 25px;
+        display: block;
+
+        select {
+            appearance: none;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 1px;
+            right: 1px;
+            bottom: 1px;
+            width: 25px;
+            border-left: 1px solid rgba($black, 0.7);
+            background-color: $white;
+            z-index: 1;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-top: 7px solid rgba($black, 0.7);
+            z-index: 2;
+            top: 9px;
+            right: 6px;
+        }
+
+        &_active {
+            &:before {
+                border-left: 1px solid $blue2;
+            }
+
+            &:after {
+                border-top: 7px solid $blue2;
+            }
+
+            select {
+                border: 1px solid $blue2;
+            }
+        }
+    }
+}

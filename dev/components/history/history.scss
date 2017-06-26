@@ -1,0 +1,80 @@
+@import "./../../scss/_variables.scss";
+
+.history {
+    &__element {
+        &:last-child {
+            .history__button {
+                border-bottom: 1px solid $blue2;
+            }
+        }
+    }
+
+    &__button {
+        font-size: 16px;
+        background-color: $white;
+        padding: 15px 10px;
+        position: relative;
+        cursor: pointer;
+        border-top: 1px solid $blue2;
+        border-left: 1px solid $blue2;
+        border-right: 1px solid $blue2;
+
+        &:hover {
+            .svg-arrow {
+                fill: $blue2;
+            }
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            transform: rotate(180deg);
+        }
+
+        .svg-arrow {
+            fill: $blue-light;
+            transition: 0.3s;
+        }
+
+        &_active {
+            svg {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    table {
+        width: 100%;
+    }
+
+    thead {
+        background-color: $blue2;
+    }
+
+    td {
+        padding: 15px 10px;
+    }
+
+    tbody {
+        tr {
+            border-bottom: 1px solid $blue2;
+
+            &:last-child {
+                font-weight: 700;
+                border-bottom: none;
+
+                td {
+                    &:nth-child(3) {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+}

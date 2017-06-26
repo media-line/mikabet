@@ -10,7 +10,7 @@ $(document).ready(function () {
     heightTop = $($top).outerHeight();
     $($search).css('top', heightTop + 'px');
 
-    if ($($pageInner).length > 0) {
+    if ($($pageInner).length > 0 && isMobile.phone) {
         $($pageInner).css('padding-top', heightTop + 'px')
     }
 });

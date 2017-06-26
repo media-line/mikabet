@@ -3,6 +3,7 @@
     font-family: 'Ubuntu', sans-serif;
     display: flex;
     align-items: center;
+    padding-top: 5px;
 
     &__second {
         position: relative;
@@ -26,6 +27,7 @@
         &:hover {
             background-color: transparent;
             border: 2px solid $white;
+            color: $white;
         }
 
         svg {
@@ -118,6 +120,8 @@
         text-decoration: none;
 
         &:hover {
+            color: $white;
+
             .svg-phone, .svg-mail {
                 fill: $white;
             }
@@ -168,6 +172,8 @@
         text-decoration: none;
 
         &:hover {
+            color: $white;
+
             .svg-key {
                 fill: $white;
             }
@@ -193,6 +199,16 @@
         text-decoration: none;
         margin-left: 10px;
         position: relative;
+        background-color: transparent;
+        border: none;
+        display: inline-block;
+        cursor: pointer;
+        padding: 0;
+        outline: none;
+
+        &:hover {
+            color: $white;
+        }
 
         @include link-decoration ($white, 1px, 3px, -5px, 3px, 0.3s);
     }
@@ -204,6 +220,10 @@
         font-weight: 700;
         margin: 0 5px;
         position: relative;
+
+        &:hover {
+            color: $white;
+        }
 
         @include link-decoration ($blue-light, 1px, 3px, -5px, 3px, 0.3s);
 
@@ -379,7 +399,7 @@
         &__download {
             font-size: 12px;
         }
-        
+
         &__logo {
             img {
                 max-width: 27%;

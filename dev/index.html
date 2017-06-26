@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8">
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Ubuntu:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Ubuntu:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
@@ -35,6 +35,7 @@
     <link href="./css/category-preview.css" rel="stylesheet">
     <link href="./css/news-preview.css" rel="stylesheet">
     <link href="./css/bottom-menu.css" rel="stylesheet">
+    <link href="./css/form.css" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -168,7 +169,7 @@
                 </div>
 
                 <div class="header__auth">
-                    <a href="/" class="header__login">
+                    <a href="/" class="header__login modal__button" data-modal-button="login">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 
@@ -191,7 +192,7 @@
 </svg> Вход
                     </a>
 
-                    <a href="/" class="header__registration">
+                    <a href="/" class="header__registration modal__button" data-modal-button="registration">
                         Регистрация
                     </a>
                 </div>
@@ -206,7 +207,7 @@
                     </a>
                 </div>
 
-                <div class="header__basket">
+                <div class="header__basket modal__button" data-modal-button="cart">
                     <a href="/" class="basket">
                         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="45.829px" height="45.829px" viewBox="0 0 45.829 45.829" style="enable-background:new 0 0 45.829 45.829;"
@@ -939,5 +940,174 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal" data-modal="registration">
+        <div class="modal__wrapper">
+            <div class="modal__block">
+                <div class="modal__body">
+                    <div class="modal__close">
+                        <svg width="64" version="1.1" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
+                          <g>
+                            <path class="svg-cross" d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"/>
+                          </g>
+                        </svg>
+                    </div>
+
+                    <div class="form form_registration">
+                        <div class="form__name">
+                            Регистрация
+                        </div>
+
+                        <div class="form__body">
+                            <div class="form__block">
+                                <span class="form__block-inner"><input id="personal1" type="radio" name="personal" checked><label for="personal1" class="form__label-radio"></label> Физическое лицо</span>
+                                <span class="form__block-inner"><input id="personal2" type="radio" name="personal"><label for="personal2" class="form__label-radio"></label> Юридическое лицо</span>
+                            </div>
+
+                            <div class="form__block">
+                                <div class="form__text">
+                                    Наименование организации*
+                                </div>
+
+                                <input type="text">
+                            </div>
+
+                            <div class="form__block">
+                                <div class="form__text">
+                                    УНП*
+                                </div>
+
+                                <input type="text">
+                            </div>
+
+                            <div class="form__block">
+                                <div class="form__text">
+                                    ФИО ответственного лица*
+                                </div>
+
+                                <input type="text">
+                            </div>
+
+                            <div class="form__block">
+                                <div class="form__text">
+                                    Электронный адрес*
+                                </div>
+
+                                <input type="text">
+                            </div>
+
+                            <div class="form__block">
+                                <div class="form__text">
+                                    Телефон*
+                                </div>
+
+                                <input type="text">
+                            </div>
+
+                            <input type="button" class="button button_form" value="Зарегистрироваться">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" data-modal="remember">
+        <div class="modal__wrapper">
+            <div class="modal__block">
+                <div class="modal__body">
+                    <div class="modal__close">
+                        <svg width="64" version="1.1" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
+                          <g>
+                            <path class="svg-cross" d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"/>
+                          </g>
+                        </svg>
+                    </div>
+
+                    <div class="form form_login">
+                        <div class="form__name">
+                            Вход
+                        </div>
+
+                        <div class="form__body">
+                            <div class="form__block">
+                                <input type="text" placeholder="Электронный адрес">
+                            </div>
+
+                            <input type="button" class="button button_form" value="Вышлете мне новый пароль">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" data-modal="cart">
+        <div class="modal__wrapper">
+            <div class="modal__block">
+                <div class="modal__body">
+                    <div class="modal__close">
+                        <svg width="64" version="1.1" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
+                          <g>
+                            <path class="svg-cross" d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"/>
+                          </g>
+                        </svg>
+                    </div>
+
+                    <div class="form">
+                        <div class="form__name">
+                            Оформление заказа для
+                        </div>
+
+                        <div class="form__body">
+                            <div class="form__block">
+                                <a href="/">Резиндента Республики Беларусь</a>
+                            </div>
+
+                            <div class="form__block">
+                                <a href="/">Нерезиндента Республики Беларусь</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" data-modal="login">
+        <div class="modal__wrapper">
+            <div class="modal__block">
+                <div class="modal__body">
+                    <div class="modal__close">
+                        <svg width="64" version="1.1" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
+                          <g>
+                            <path class="svg-cross" d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"/>
+                          </g>
+                        </svg>
+                    </div>
+
+                    <div class="form form_login">
+                        <div class="form__name">
+                            Оформление заказа для
+                        </div>
+
+                        <div class="form__body">
+                            <div class="form__block">
+                                <input type="text" placeholder="Электронный адрес">
+                            </div>
+
+                            <div class="form__block">
+                                <input type="text" placeholder="Пароль">
+
+                                <a href="/">Не помню</a>
+                            </div>
+
+                            <input type="button" class="button button_form" value="Войти">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

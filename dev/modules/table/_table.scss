@@ -1,0 +1,29 @@
+table {
+    font-size: 14px;
+    width: 100%;
+
+    td {
+        padding: 5px 10px 5px 0;
+        min-width: 80px;
+    }
+
+    thead {
+        border-bottom: 1px solid $blue2;
+        font-weight: 500;
+    }
+
+    tbody {
+        tr:first-child {
+            td {
+                padding-top: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: $tablet-point) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}

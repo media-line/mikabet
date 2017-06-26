@@ -23,6 +23,10 @@
         @include link-decoration ($white, 1px, 1px, -10px, 2px, 0.3s);
         line-height: 1.3;
 
+        &:hover {
+            color: $white;
+        }
+
         &_big {
             font-size: 20px;
             margin-bottom: 20px;

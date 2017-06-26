@@ -6,13 +6,41 @@
     font-family: 'Ubuntu';
     padding-bottom: 30px;
     background: linear-gradient(to top, rgba($blue-white, 0.3), $blue-white);
+    position: relative;
+    background-position: center top;
 
     &_contacts {
         background-image: url('./../images/contacts-back.jpg');
+        background-size: cover;
+    }
+
+    &_product {
+        background-image: url('./../images/product-back.jpg');
+        background-size: 100% auto;
+
+        &:before {
+            content: '';
+            background: linear-gradient(to top, rgba($blue-white, 0.3), rgba($blue-white, 0.8));
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .container, .advantages {
+            position: relative;
+        }
+    }
+
+    &_catalog {
+        background-image: url('./../images/catalog-back.jpg');
+        background-size: cover;
     }
 
     &__wrap {
         display: flex;
+        position: relative;
     }
 
     &__left {
@@ -35,6 +63,10 @@
                 color: $black;
             }
         }
+
+        img {
+            max-width: 100%;
+        }
     }
 
     &__two-block {
@@ -55,6 +87,14 @@
         &_line {
             border-right: 1px solid $blue-light;
             padding-right: 15px;
+        }
+    }
+
+    &__history-block {
+        display: flex;
+
+        & > p:first-child {
+            margin-right: 15px;
         }
     }
 }
@@ -80,6 +120,8 @@
 
 @media (max-width: $mobile-point) {
     .page-inner {
+        padding-top: 40px;
+
         &__two-block-single {
             min-width: 100%;
             width: 100%;

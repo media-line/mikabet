@@ -1,0 +1,56 @@
+.tabs {
+    &__buttons {
+        display: flex;
+        margin-bottom: 20px;
+        border-bottom: 1px solid $blue2;
+    }
+
+    &__button {
+        background-color: $blue-light;
+        padding: 15px;
+        font-size: 14px;
+        font-weight: 700;
+        color: $white;
+        border: 1px solid $blue-light;
+        cursor: pointer;
+        transition: 0.3s;
+        position: relative;
+        top: 1px;
+
+        &:hover {
+            background-color: $white;
+            color: $black;
+        }
+
+        &_active {
+            color: $black;
+            background-color: $white;
+            border-bottom: 1px solid $white;
+            border-left: 1px solid $blue2;
+            border-right: 1px solid $blue2;
+            border-top: 1px solid $blue2;
+            cursor: default;
+        }
+    }
+
+    &__content {
+        position: relative;
+        transition: 0.4s;
+        height: 0;
+        margin-bottom: 25px;
+    }
+
+    &__text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.4s;
+
+        &_active {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

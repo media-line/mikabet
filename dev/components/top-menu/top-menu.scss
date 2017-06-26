@@ -34,6 +34,10 @@
         position: relative;
         display: inline-block;
 
+        &:hover {
+            color: $white;
+        }
+
         @include link-decoration ($white, 1px, 3px, -10px, 5px, 0.3s);
     }
 

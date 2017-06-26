@@ -2,7 +2,7 @@
     background-color: $blue-light;
     font-size: 14px;
     font-family: "Ubuntu", sans-serif;
-    color: $white;
+    color: $white !important;
     text-decoration: none;
     display: inline-block;
     padding: 12px 60px;
@@ -10,13 +10,52 @@
     border: 2px solid $blue-light;
     transition: 0.3s;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 700 !important;
     text-align: center;
     cursor: pointer;
 
     &:hover {
         background-color: $white;
-        color: $blue-light;
+        color: $blue-light !important;
+    }
+
+    &_product {
+        background-color: $white;
+        color: $black;
+        border: 2px solid $white;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        left: 25px;
+        bottom: 25px;
+    }
+
+    &_order {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 35px;
+    }
+
+    &_clear {
+        background-color: $white;
+        color: $blue-light !important;
+        border: 2px solid $blue2;
+
+        &:hover {
+            background-color: $blue-light;
+            border: 2px solid $blue-light;
+            color: $white !important;
+        }
+    }
+
+    &_form {
+        width: 100%;
+        max-width: 100% !important;
+        font-size: 18px;
+        font-family: "Ubuntu";
+        padding: 12px 20px;
+        margin-top: 20px;
     }
 }
 

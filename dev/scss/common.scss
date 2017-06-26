@@ -11,6 +11,10 @@
 @import "./../modules/page-inner/_page-inner.scss";
 @import "./../modules/contact/_contact.scss";
 @import "./../modules/editor/_editor.scss";
+@import "./../modules/select/_select.scss";
+@import "./../modules/tabs/_tabs.scss";
+@import "./../modules/table/_table.scss";
+@import "./../modules/modal/_modal.scss";
 
 
 @font-face {
@@ -100,7 +104,7 @@
 }
 
 
-body {
+body, textarea, input {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -116,3 +120,11 @@ b {
 p {
     padding-bottom: 10px;
 }
+
+/*.bx-soa {
+    padding-right: 30px;
+}
+
+@media (max-width: $mobile-point) {
+    padding-right: 0px;
+}*/

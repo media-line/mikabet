@@ -1,0 +1,67 @@
+.order-block {
+    display: flex;
+    align-items: stretch;
+
+    &__info {
+        background-color: $blue-white;
+        padding: 10px 20px;
+    }
+
+    &__text {
+        font-size: 12px;
+        color: rgba($black, 0.6);
+    }
+
+    &__calc {
+        display: flex;
+        align-items: center;
+    }
+
+    &__price {
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    &__currency {
+        font-size: 18px;
+        padding: 0 10px 0 5px;
+    }
+
+    &__multiply {
+        width: 40px;
+        position: relative;
+
+        &:after {
+            content: '';
+            height: 24px;
+            width: 2px;
+            background-color: $black;
+            position: absolute;
+            top: -12px;
+            left: 12px;
+            transform: rotate(45deg);
+        }
+
+        &:before {
+            content: '';
+            height: 24px;
+            width: 2px;
+            background-color: $black;
+            position: absolute;
+            top: -12px;
+            left: 12px;
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__quantity {
+        font-size: 14px;
+
+        input {
+            width: 40px;
+            text-align: center;
+            font-size: 14px;
+            border: none;
+        }
+    }
+}

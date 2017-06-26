@@ -55,16 +55,16 @@ gulp.task('clean:script', function() {
 gulp.task('postcss', function() {
     return gulp.src('./dev/**/*.scss')
     .pipe(plumber({ errorHandler: handleErrors }))
-    .pipe(cache('postcss'))
     .pipe(sourcemaps.init())
     .pipe(sass({
        errLogToConsole: true,
        outputStyle: 'expanded'
     }))
+    .pipe(cache('postcss'))
     .pipe(postcss([
        autoprefixer({ browsers: ['last 2 version'] }),
     ]))
-    .pipe(sourcemaps.write())
+    //.pipe(sourcemaps.write())
     .pipe(rename(function (path) {
         path.dirname = "";
     }))
@@ -90,7 +90,7 @@ gulp.task('scripts', function(callback) {
     .pipe(named())
     .pipe(webpackStream({
         watch: true,
-        devtool: 'cheap-module-inline-source-map',
+        //devtool: 'cheap-module-inline-source-map',
         module: {
             loaders: [{
                 test: /.js?$/,
@@ -102,7 +102,10 @@ gulp.task('scripts', function(callback) {
             }]
         },
         plugins: [
-            new webpack.NoErrorsPlugin()
+            new webpack.NoErrorsPlugin(),
+            new webpack.ProvidePlugin({
+                Promise: "bluebird"
+            }),
         ]
     }, null, function(err, stats) {
         if (startBuild) {

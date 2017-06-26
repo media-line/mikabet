@@ -1,0 +1,26 @@
+@import "./../../scss/_variables.scss";
+
+
+.personal-menu {
+    background-color: $white;
+    padding: 15px 20px;
+    border: 1px solid $blue2;
+    font-size: 16px;
+
+    &__element {
+        & + .personal-menu__element {
+            padding-top: 5px;
+        }
+    }
+
+    &__link {
+        color: $blue-light;
+        text-decoration: none;
+
+        &:hover {
+            color: $blue-light;
+        }
+
+        @include link-decoration-inverse ($blue-light, 1px, 1px, 1px, -3px, 0.3s)
+    }
+}

@@ -1,0 +1,116 @@
+@import "./../../scss/_variables.scss";
+@import "./../../modules/order-block/_order-block.scss";
+@import "./../../modules/filter-params/_filter-params.scss";
+
+.product-detail {
+    padding-bottom: 20px;
+
+    &_active {
+        .product-detail__top {
+            align-items: flex-end;
+        }
+    }
+
+    &__top {
+        display: flex;
+        padding-bottom: 20px;
+    }
+
+    &__img {
+        min-width: 33%;
+        width: 33%;
+        margin-right: 3%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__info {
+        min-width: 64%;
+        width: 64%;
+    }
+
+    &__info-text {
+        font-size: 13px;
+        font-weight: 700;
+        padding: 5px 0 10px 0;
+    }
+
+    &__params-filter {
+        background-color: $blue2;
+        padding: 15px;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 30px;
+
+        table {
+            font-size: 14px;
+            width: 100%;
+
+            td {
+                padding-right: 10px;
+            }
+        }
+    }
+
+    &__params-filter-title {
+        padding-bottom: 10px;
+    }
+
+    &__params-title {
+        font-size: 16px;
+        font-weight: 500;
+        border-bottom: dashed 1px $black;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    &__params-info {
+        font-size: 16px;
+        font-weight: 500;
+        position: relative;
+        padding-bottom: 20px;
+    }
+
+    &__sort {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        select {
+            background-color: transparent;
+            border: none;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: 'Ubuntu', sans-serif;
+            line-height: 1;
+            transition: 0.3s;
+
+            &:hover {
+                color: rgba($black, 0.5);
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile-point) {
+    .product-detail {
+        &__top {
+            flex-direction: column;
+            padding-bottom: 40px;
+        }
+
+        &__img {
+            min-width: 100%;
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+
+        &__info {
+            min-width: 100%;
+            width: 100%;
+        }
+    }
+}
