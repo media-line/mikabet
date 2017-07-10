@@ -20,7 +20,7 @@
         display: inline-block;
         text-transform: uppercase;
         font-weight: 700;
-        padding: 21px;
+        padding: 16px 21px;
         transition: 0.3s;
         border: 2px solid $blue-light;
 
@@ -40,7 +40,7 @@
     }
 
     &__top-block {
-        height: 70px;
+        //height: 70px;
         position: absolute;
         top: 0;
         left: 0;
